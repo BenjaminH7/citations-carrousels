@@ -11,6 +11,7 @@ spec.json :
   "subtitle": "par ceux qui l'ont écrite",
   "quotes": [
     {"quote": "...", "author": "Pascal", "work": "Pensées", "year": "1670"},
+    # poésie : séparer les vers par " / " -> composés vers par vers
     ...                                   # 4 à 8 citations
   ],
   "music": "Gymnopédie n° 1, Erik Satie"
@@ -191,20 +192,73 @@ def slide_cover(spec, count):
     return im
 
 
+def verse_lines(d, verses, f, maxw):
+    """Vers par vers ; un vers trop long continue à la ligne avec un retrait."""
+    out = []
+    for v in verses:
+        words, cur = v.split(" "), []
+        for w in words:
+            if cur and tl(d, " ".join(cur + [w]).replace(" ", ""), f) + d.textlength(" ", font=f) * len(cur) > maxw:
+                out.append((cur, len(out) and out[-1][2] == v and True, v))
+                cur = [w]
+            else:
+                cur.append(w)
+        out.append((cur, False, v))
+    # marque les lignes de continuation (même vers que la ligne précédente)
+    res, prev = [], None
+    for words, _, v in out:
+        res.append((words, v == prev))
+        prev = v
+    return res
+
+
+def draw_line(d, words, x, y, f, fill=INK):
+    sp = d.textlength(" ", font=f)
+    for w in words:
+        draw_word(d, x, y, w, f, fill)
+        x += tl(d, w, f) + sp
+
+
+def line_w(d, words, f):
+    return sum(tl(d, w, f) for w in words) + d.textlength(" ", font=f) * (len(words) - 1)
+
+
 def slide_quote(q, n):
     im = Image.new("RGB", (W, H), BG); d = ImageDraw.Draw(im)
-    f, lh = font(48), 1.48
-    lines, colw = best(d, q["quote"], f)
-    x0 = (W - colw) / 2
-    block = len(lines) * f.size * lh + 60 + 44 + 46
-    y = (H - block) / 2 - 50
-    y = justify(d, lines, colw, x0, y, f, lh)
-    sc = font(42)
-    nw = d.textlength(q["author"], font=sc, features=["smcp"])
-    d.text((x0 + colw - nw, y + 60), q["author"], font=sc, fill=INK, features=["smcp"])
+    text = q["quote"].strip()
+    sc, it = font(42), font(34, True)
     src = typo(f'{q["work"]}, {q["year"]}').replace(THIN, " ")
-    it = font(34, True)
-    d.text((x0 + colw - d.textlength(src, font=it), y + 112), src, font=it, fill=GREY)
+    VSEP = r"[\s\u00a0\u202f]+/[\s\u00a0\u202f]+"
+    if re.search(VSEP, text):                           # poésie : composée vers par vers
+        verses = [typo(v.strip()) for v in re.split(VSEP, text) if v.strip()]
+        maxw = W - 2 * 120
+        size = 48
+        while size > 42:
+            f = font(size)
+            if max(line_w(d, v.split(" "), f) for v in verses) <= maxw:
+                break
+            size -= 1
+        f, lh = font(size), 1.45
+        lines = verse_lines(d, verses, f, maxw)
+        blockw = max(line_w(d, w, f) for w, cont in lines)
+        blockw = max(blockw, d.textlength(q["author"], font=sc, features=["smcp"]), d.textlength(src, font=it))
+        x0 = (W - blockw) / 2
+        y = (H - (len(lines) * size * lh + 60 + 44 + 46)) / 2 - 50
+        for words, cont in lines:
+            # rejet d'un vers trop long : aligné à droite, comme dans les éditions classiques
+            draw_line(d, words, (x0 + blockw - line_w(d, words, f)) if cont else x0, y, f)
+            y += size * lh
+        right = x0 + blockw
+    else:                                               # prose : justifiée avec césure
+        f, lh = font(48), 1.48
+        lines, colw = best(d, text, f)
+        x0 = (W - colw) / 2
+        y = (H - (len(lines) * f.size * lh + 60 + 44 + 46)) / 2 - 50
+        y = justify(d, lines, colw, x0, y, f, lh)
+        right = x0 + colw
+    nw = d.textlength(q["author"], font=sc, features=["smcp"])
+    d.text((right - nw, y + 60), q["author"], font=sc, fill=INK, features=["smcp"])
+    d.text((right - d.textlength(src, font=it), y + 112), src, font=it, fill=GREY)
     folio(d, n)
     return im
 
