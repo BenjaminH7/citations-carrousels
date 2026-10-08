@@ -223,12 +223,17 @@ def slide_music(spec, n):
     return im
 
 
-def render(spec, out):
-    os.makedirs(out, exist_ok=True)
+def build_slides(spec):
     qs = spec["quotes"][:8]                 # Instagram : 10 slides max
     slides = [slide_cover(spec, len(qs))]
     slides += [slide_quote(q, i) for i, q in enumerate(qs, 2)]
     slides.append(slide_music(spec, len(qs) + 2))
+    return slides
+
+
+def render(spec, out):
+    os.makedirs(out, exist_ok=True)
+    slides = build_slides(spec)
     paths = []
     for n, im in enumerate(slides, 1):
         p = os.path.join(out, f"{spec['id']}-{n:02d}.jpg")
