@@ -1,22 +1,22 @@
 #!/usr/bin/env python3
-"""Carrousel Instagram, typographie de livre classique, noir sur blanc.
+"""Carrousel Instagram thématique : plusieurs citations sur un même thème.
+Typographie de livre classique, noir sur blanc.
 
 Usage : python3 generate.py spec.json out_dir/
 
 spec.json :
 {
-  "id": "2026-10-09-baudelaire",
-  "quote": "Il faut être toujours ivre. Tout est là : c'est l'unique question.",
-  "author": "Baudelaire",                 # nom court sous la citation
-  "author_full": "Charles Baudelaire",
-  "work": "Le Spleen de Paris",
-  "year": "1869",
-  "context": "2-3 phrases",
-  "reading": "2-3 phrases",
-  "music": "Gnossienne n° 1, Erik Satie"
+  "id": "2026-10-09-solitude",
+  "title": "La solitude",
+  "subtitle": "par ceux qui l'ont écrite",
+  "quotes": [
+    {"quote": "...", "author": "Pascal", "work": "Pensées", "year": "1670"},
+    ...                                   # 4 à 8 citations
+  ],
+  "music": "Gymnopédie n° 1, Erik Satie"
 }
 
-Slides : 1 citation · 2 source + contexte · 3 lecture · 4 bande-son.
+Slides : couverture · une citation par slide · bande-son + appel à l'enregistrement.
 Typographie : EB Garamond, justification avec césure française, espaces fines
 insécables avant ; ! ? et dans les guillemets, insécable avant :, apostrophe courbe.
 """
@@ -160,34 +160,51 @@ def folio(d, n):
 
 
 # ---------- slides ----------
-def slide_quote(spec):
+def wrap_centered(d, text, f, maxw):
+    lines, cur = [], ""
+    for w in typo(text).replace(THIN, " ").split(" "):
+        t = (cur + " " + w).strip()
+        if d.textlength(t, font=f) <= maxw or not cur:
+            cur = t
+        else:
+            lines.append(cur); cur = w
+    return lines + [cur]
+
+
+def slide_cover(spec, count):
     im = Image.new("RGB", (W, H), BG); d = ImageDraw.Draw(im)
-    f, lh = font(48), 1.48
-    lines, colw = best(d, spec["quote"], f)
-    x0 = (W - colw) / 2
-    block = len(lines) * f.size * lh + 60 + 44
-    y = (H - block) / 2 - 50
-    y = justify(d, lines, colw, x0, y, f, lh)
-    sc = font(42)
-    name = spec["author"]
-    nw = d.textlength(name, font=sc, features=["smcp"])
-    d.text((x0 + colw - nw, y + 60), name, font=sc, fill=INK, features=["smcp"])
+    tf = font(76)
+    tl_ = wrap_centered(d, spec["title"], tf, COLW)
+    sf = font(42, True)
+    sl = wrap_centered(d, spec.get("subtitle", ""), sf, COLW) if spec.get("subtitle") else []
+    block = 50 + 80 + len(tl_) * 76 * 1.2 + 30 + len(sl) * 42 * 1.4
+    y = (H - block) / 2 - 40
+    nums = ["", "", "", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf", "dix"]
+    label = f"{nums[count].capitalize()} citations" if count < len(nums) else f"{count} citations"
+    centered(d, label, y, font(34), GREY, ["smcp"]); y += 50
+    centered(d, "❧", y + 10, font(34), GREY); y += 80
+    for ln in tl_:
+        centered(d, ln, y, tf); y += 76 * 1.2
+    y += 30
+    for ln in sl:
+        centered(d, ln, y, sf, GREY); y += 42 * 1.4
     return im
 
 
-def slide_text(spec, n, head, sub, body):
+def slide_quote(q, n):
     im = Image.new("RGB", (W, H), BG); d = ImageDraw.Draw(im)
-    f, lh = font(40), 1.5
-    lines, colw = best(d, body, f)
+    f, lh = font(48), 1.48
+    lines, colw = best(d, q["quote"], f)
     x0 = (W - colw) / 2
-    hsz, ssz = 34, 38
-    block = hsz * 1.4 + (ssz * 1.4 if sub else 0) + 110 + len(lines) * f.size * lh
-    y = (H - block) / 2 - 40
-    centered(d, head, y, font(hsz), GREY, ["smcp"]); y += hsz * 1.4
-    if sub:
-        centered(d, typo(sub).replace(THIN, " "), y + 4, font(ssz, True), GREY); y += ssz * 1.4
-    centered(d, "❧", y + 28, font(34), GREY); y += 110
-    justify(d, lines, colw, x0, y, f, lh)
+    block = len(lines) * f.size * lh + 60 + 44 + 46
+    y = (H - block) / 2 - 50
+    y = justify(d, lines, colw, x0, y, f, lh)
+    sc = font(42)
+    nw = d.textlength(q["author"], font=sc, features=["smcp"])
+    d.text((x0 + colw - nw, y + 60), q["author"], font=sc, fill=INK, features=["smcp"])
+    src = typo(f'{q["work"]}, {q["year"]}').replace(THIN, " ")
+    it = font(34, True)
+    d.text((x0 + colw - d.textlength(src, font=it), y + 112), src, font=it, fill=GREY)
     folio(d, n)
     return im
 
@@ -196,9 +213,11 @@ def slide_music(spec, n):
     im = Image.new("RGB", (W, H), BG); d = ImageDraw.Draw(im)
     y = H / 2 - 190
     centered(d, "À écouter avec", y, font(34), GREY, ["smcp"]); y += 70
-    centered(d, typo(spec["music"]).replace(THIN, " "), y, font(46, True)); y += 150
+    for ln in wrap_centered(d, spec["music"], font(46, True), COLW):
+        centered(d, ln, y, font(46, True)); y += 64
+    y += 86
     centered(d, "❧", y, font(34), GREY); y += 110
-    centered(d, "Enregistre-la.", y, font(40)); y += 60
+    centered(d, "Enregistre-les.", y, font(40)); y += 60
     centered(d, "Tu en auras besoin un jour.", y, font(40))
     folio(d, n)
     return im
@@ -206,15 +225,13 @@ def slide_music(spec, n):
 
 def render(spec, out):
     os.makedirs(out, exist_ok=True)
-    slides = [
-        slide_quote(spec),
-        slide_text(spec, 2, spec["author_full"], f'{spec["work"]}, {spec["year"]}', spec["context"]),
-        slide_text(spec, 3, "Ce qu’elle nous dit", None, spec["reading"]),
-        slide_music(spec, 4),
-    ]
+    qs = spec["quotes"][:8]                 # Instagram : 10 slides max
+    slides = [slide_cover(spec, len(qs))]
+    slides += [slide_quote(q, i) for i, q in enumerate(qs, 2)]
+    slides.append(slide_music(spec, len(qs) + 2))
     paths = []
     for n, im in enumerate(slides, 1):
-        p = os.path.join(out, f"{spec['id']}-{n}.jpg")
+        p = os.path.join(out, f"{spec['id']}-{n:02d}.jpg")
         im.save(p, quality=95, subsampling=0)
         paths.append(p)
     return paths
