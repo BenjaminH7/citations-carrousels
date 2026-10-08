@@ -41,5 +41,41 @@
         "quote": "Passent les jours et passent les semaines / Ni temps passé / Ni les amours reviennent / Sous le pont Mirabeau coule la Seine"
       }
     ]
+  },
+  {
+    "date": "2026-10-08",
+    "theme": "la jalousie",
+    "quotes": [
+      {
+        "auteur": "La Rochefoucauld",
+        "oeuvre": "Maximes",
+        "annee": "1665",
+        "quote": "La jalousie naît toujours avec l'amour, mais elle ne meurt pas toujours avec lui."
+      },
+      {
+        "auteur": "Jean Racine",
+        "oeuvre": "Andromaque",
+        "annee": "1667",
+        "quote": "Je t'aimais inconstant, qu'aurais-je fait fidèle ? / Et même en ce moment où ta bouche cruelle / Vient si tranquillement m'annoncer le trépas, / Ingrat, je doute encor si je ne t'aime pas."
+      },
+      {
+        "auteur": "Beaumarchais",
+        "oeuvre": "Le Mariage de Figaro",
+        "annee": "1784",
+        "quote": "La jalousie n'est qu'un sot enfant de l'orgueil, ou c'est la maladie d'un fou."
+      },
+      {
+        "auteur": "Alfred de Musset",
+        "oeuvre": "La Nuit d'octobre",
+        "annee": "1837",
+        "quote": "Honte à toi qui la première / M'as appris la trahison, / Et d'horreur et de colère / M'as fait perdre la raison !"
+      },
+      {
+        "auteur": "Marcel Proust",
+        "oeuvre": "La Prisonnière",
+        "annee": "1923",
+        "quote": "La jalousie est aussi un démon qui ne peut être exorcisé, et reparaît toujours, incarné sous une nouvelle forme."
+      }
+    ]
   }
 ]
