@@ -30,14 +30,18 @@ def ffmpeg_bin():
 FADE = 0.6
 
 
-def durations(spec):
+def durations(spec, max_quotes_time=28.0):
+    """Temps de lecture par plan ; total des citations plafonné pour rester autour de 35 s."""
     qs = spec["quotes"][:8]
-    d = [2.6]                                         # couverture : accroche rapide
+    qd = []
     for q in qs:
-        words = len(q["quote"].split())
-        d.append(max(3.6, min(7.5, 1.6 + words / 4.0)))   # ~4 mots/s : lecture posée, Reel autour de 30 s
-    d.append(3.5)                                     # bande-son + appel à l'enregistrement
-    return d
+        words = len([w for w in q["quote"].split() if w != "/"])
+        qd.append(max(3.4, min(7.0, 1.4 + words / 4.2)))   # ~4 mots/s, lecture posée
+    tot = sum(qd)
+    if tot > max_quotes_time:
+        k = max_quotes_time / tot
+        qd = [max(3.2, d * k) for d in qd]
+    return [2.6] + qd + [3.5]   # couverture · citations · bande-son
 
 
 def render_reel(spec, out):
