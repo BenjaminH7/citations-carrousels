@@ -77,5 +77,41 @@
         "quote": "La jalousie est aussi un démon qui ne peut être exorcisé, et reparaît toujours, incarné sous une nouvelle forme."
       }
     ]
+  },
+  {
+    "date": "2026-10-08",
+    "theme": "Paris",
+    "quotes": [
+      {
+        "auteur": "Montaigne",
+        "oeuvre": "Essais, III, 9",
+        "annee": "1588",
+        "quote": "Je l'aime tendrement, jusques à ses verrues et à ses taches. Je ne suis Français que par cette grande cité."
+      },
+      {
+        "auteur": "Jean-Jacques Rousseau",
+        "oeuvre": "Émile ou De l'éducation",
+        "annee": "1762",
+        "quote": "Adieu donc, Paris, ville célèbre, ville de bruit, de fumée et de boue, où les femmes ne croient plus à l'honneur ni les hommes à la vertu."
+      },
+      {
+        "auteur": "Honoré de Balzac",
+        "oeuvre": "Le Père Goriot",
+        "annee": "1835",
+        "quote": "Paris est un véritable océan. Jetez-y la sonde, vous n'en connaîtrez jamais la profondeur."
+      },
+      {
+        "auteur": "Charles Baudelaire",
+        "oeuvre": "Le Cygne, Les Fleurs du mal",
+        "annee": "1861",
+        "quote": "Le vieux Paris n'est plus (la forme d'une ville / Change plus vite, hélas ! que le cœur d'un mortel)"
+      },
+      {
+        "auteur": "Guillaume Apollinaire",
+        "oeuvre": "Zone, Alcools",
+        "annee": "1913",
+        "quote": "À la fin tu es las de ce monde ancien / Bergère ô tour Eiffel le troupeau des ponts bêle ce matin"
+      }
+    ]
   }
 ]

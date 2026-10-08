@@ -1,12 +1,37 @@
 {
-  "id": "2026-10-08-la-jalousie",
-  "title": "La jalousie",
-  "subtitle": "par ceux qui l'ont éprouvée",
+  "id": "2026-10-08-paris",
+  "title": "Paris",
+  "subtitle": "par ceux qui l'ont aimée",
   "quotes": [
-    {"quote": "La jalousie naît toujours avec l'amour, mais elle ne meurt pas toujours avec lui.", "author": "La Rochefoucauld", "work": "Maximes", "year": "1665"},
-    {"quote": "Je t'aimais inconstant, qu'aurais-je fait fidèle ? / Et même en ce moment où ta bouche cruelle / Vient si tranquillement m'annoncer le trépas, / Ingrat, je doute encor si je ne t'aime pas.", "author": "Jean Racine", "work": "Andromaque", "year": "1667"},
-    {"quote": "La jalousie n'est qu'un sot enfant de l'orgueil, ou c'est la maladie d'un fou.", "author": "Beaumarchais", "work": "Le Mariage de Figaro", "year": "1784"},
-    {"quote": "Honte à toi qui la première / M'as appris la trahison, / Et d'horreur et de colère / M'as fait perdre la raison !", "author": "Alfred de Musset", "work": "La Nuit d'octobre", "year": "1837"},
-    {"quote": "La jalousie est aussi un démon qui ne peut être exorcisé, et reparaît toujours, incarné sous une nouvelle forme.", "author": "Marcel Proust", "work": "La Prisonnière", "year": "1923"}
+    {
+      "quote": "Je l'aime tendrement, jusques à ses verrues et à ses taches. Je ne suis Français que par cette grande cité.",
+      "author": "Montaigne",
+      "work": "Essais, III, 9",
+      "year": "1588"
+    },
+    {
+      "quote": "Adieu donc, Paris, ville célèbre, ville de bruit, de fumée et de boue, où les femmes ne croient plus à l'honneur ni les hommes à la vertu.",
+      "author": "Jean-Jacques Rousseau",
+      "work": "Émile ou De l'éducation",
+      "year": "1762"
+    },
+    {
+      "quote": "Paris est un véritable océan. Jetez-y la sonde, vous n'en connaîtrez jamais la profondeur.",
+      "author": "Honoré de Balzac",
+      "work": "Le Père Goriot",
+      "year": "1835"
+    },
+    {
+      "quote": "Le vieux Paris n'est plus (la forme d'une ville / Change plus vite, hélas ! que le cœur d'un mortel)",
+      "author": "Charles Baudelaire",
+      "work": "Le Cygne, Les Fleurs du mal",
+      "year": "1861"
+    },
+    {
+      "quote": "À la fin tu es las de ce monde ancien / Bergère ô tour Eiffel le troupeau des ponts bêle ce matin",
+      "author": "Guillaume Apollinaire",
+      "work": "Zone, Alcools",
+      "year": "1913"
+    }
   ]
 }
