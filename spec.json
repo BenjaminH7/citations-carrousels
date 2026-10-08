@@ -1,0 +1,44 @@
+{
+  "id": "2026-10-08-le-temps-qui-passe",
+  "title": "Le temps qui passe",
+  "subtitle": "en cinq siècles de poésie",
+  "quotes": [
+    {
+      "quote": "Vivez, si m'en croyez, n'attendez à demain : / Cueillez dès aujourd'hui les roses de la vie.",
+      "author": "Ronsard",
+      "work": "Sonnets pour Hélène",
+      "year": "1578"
+    },
+    {
+      "quote": "Et rose elle a vécu ce que vivent les roses, / L'espace d'un matin.",
+      "author": "Malherbe",
+      "work": "Consolation à M. du Périer",
+      "year": "vers 1598"
+    },
+    {
+      "quote": "Le corps se perd dans l'eau, le nom dans la mémoire. / Le temps, qui sur toute ombre en verse une plus noire, / Sur le sombre Océan jette le sombre oubli.",
+      "author": "Victor Hugo",
+      "work": "Oceano Nox, Les Rayons et les Ombres",
+      "year": "1840"
+    },
+    {
+      "quote": "Ô douleur ! ô douleur ! Le Temps mange la vie, / Et l'obscur Ennemi qui nous ronge le cœur / Du sang que nous perdons croît et se fortifie !",
+      "author": "Charles Baudelaire",
+      "work": "L'Ennemi, Les Fleurs du mal",
+      "year": "1857"
+    },
+    {
+      "quote": "Tout suffocant / Et blême, quand / Sonne l'heure, / Je me souviens / Des jours anciens / Et je pleure",
+      "author": "Paul Verlaine",
+      "work": "Chanson d'automne, Poèmes saturniens",
+      "year": "1866"
+    },
+    {
+      "quote": "Passent les jours et passent les semaines / Ni temps passé / Ni les amours reviennent / Sous le pont Mirabeau coule la Seine",
+      "author": "Guillaume Apollinaire",
+      "work": "Le Pont Mirabeau, Alcools",
+      "year": "1913"
+    }
+  ],
+  "music": "Gymnopédie n° 1, Erik Satie"
+}
