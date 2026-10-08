@@ -46,7 +46,7 @@ def durations(spec, max_quotes_time=28.0):
 
 def render_reel(spec, out):
     os.makedirs(out, exist_ok=True)
-    slides, durs = build_slides(spec), durations(spec)
+    slides, durs = build_slides(spec, reel=True), durations(spec)
     tmp = tempfile.mkdtemp()
     frames = []
     for i, im in enumerate(slides):

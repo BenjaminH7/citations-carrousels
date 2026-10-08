@@ -17,7 +17,8 @@ spec.json :
   "music": "Gymnopédie n° 1, Erik Satie"
 }
 
-Slides : couverture · une citation par slide · bande-son + appel à l'enregistrement.
+Slides : couverture · une citation par slide · appel à l'enregistrement
+(la bande-son n'est annoncée que dans le Reel, où elle est réellement entendue).
 Typographie : EB Garamond, justification avec césure française, espaces fines
 insécables avant ; ! ? et dans les guillemets, insécable avant :, apostrophe courbe.
 """
@@ -264,6 +265,7 @@ def slide_quote(q, n):
 
 
 def slide_music(spec, n):
+    """Dernière slide du Reel : la musique y est réellement entendue."""
     im = Image.new("RGB", (W, H), BG); d = ImageDraw.Draw(im)
     y = H / 2 - 190
     centered(d, "À écouter avec", y, font(34), GREY, ["smcp"]); y += 70
@@ -277,11 +279,22 @@ def slide_music(spec, n):
     return im
 
 
-def build_slides(spec):
+def slide_end(n):
+    """Dernière slide du carrousel : pas de musique annoncée, puisqu'on ne l'entend pas."""
+    im = Image.new("RGB", (W, H), BG); d = ImageDraw.Draw(im)
+    y = H / 2 - 110
+    centered(d, "❧", y, font(34), GREY); y += 110
+    centered(d, "Enregistre-les.", y, font(40)); y += 60
+    centered(d, "Tu en auras besoin un jour.", y, font(40))
+    folio(d, n)
+    return im
+
+
+def build_slides(spec, reel=False):
     qs = spec["quotes"][:8]                 # Instagram : 10 slides max
     slides = [slide_cover(spec, len(qs))]
     slides += [slide_quote(q, i) for i, q in enumerate(qs, 2)]
-    slides.append(slide_music(spec, len(qs) + 2))
+    slides.append(slide_music(spec, len(qs) + 2) if reel else slide_end(len(qs) + 2))
     return slides
 
 
