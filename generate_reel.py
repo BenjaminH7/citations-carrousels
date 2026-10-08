@@ -8,13 +8,25 @@ dans la zone sûre (hors légende et boutons Instagram). Chaque citation reste a
 temps de la lire calmement, avec un fondu enchaîné entre les plans. La vidéo est muette
 (piste audio silencieuse) : la musique est ajoutée par Instagram via le catalogue audio.
 """
-import json, os, subprocess, sys, tempfile
+import json, os, shutil, subprocess, sys, tempfile
 from PIL import Image
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from generate import build_slides, W, H  # noqa: E402
 
 RW, RH = 1080, 1920
+
+
+def ffmpeg_bin():
+    exe = shutil.which("ffmpeg")
+    if exe:
+        return exe
+    try:
+        import imageio_ffmpeg
+    except ImportError:
+        subprocess.run([sys.executable, "-m", "pip", "install", "-q", "--break-system-packages", "imageio-ffmpeg"], check=True)
+        import imageio_ffmpeg
+    return imageio_ffmpeg.get_ffmpeg_exe()
 FADE = 0.6
 
 
@@ -40,7 +52,7 @@ def render_reel(spec, out):
         canvas.save(p)
         frames.append(p)
     # chaque plan dure d + FADE pour que les fondus ne rognent pas le temps de lecture
-    args = ["ffmpeg", "-y", "-loglevel", "error"]
+    args = [ffmpeg_bin(), "-y", "-loglevel", "error"]
     for p, d in zip(frames, durs):
         args += ["-loop", "1", "-t", f"{d + FADE:.2f}", "-framerate", "30", "-i", p]
     total = sum(durs) + FADE
