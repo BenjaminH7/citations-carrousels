@@ -11,6 +11,7 @@ spec.json :
   "subtitle": "par ceux qui l'ont écrite",
   "quotes": [
     {"quote": "...", "author": "Pascal", "work": "Pensées", "year": "1670"},
+    # vers : séparer par "\n" → un vers par ligne, au fer à gauche
     ...                                   # 4 à 8 citations
   ],
   "music": "Gymnopédie n° 1, Erik Satie"
@@ -126,13 +127,81 @@ def compose(d, text, f, colw):
     return lines, score
 
 
+def compose_dp(d, text, f, colw):
+    """Coupure optimale (programmation dynamique) : minimise la somme des pénalités de ligne."""
+    sp = d.textlength(" ", font=f)
+    words = [w for w in typo(text).split(" ") if w]
+    n = len(words)
+    W_ = [tl(d, w, f) for w in words]
+    splits = [hyphen_splits(w) for w in words]
+    INF = float("inf")
+    memo = {}
+
+    def line_cost(items, hyph, last):
+        used = sum(tl(d, x, f) for x in items)
+        if used + sp * (len(items) - 1) > colw and len(items) > 1:
+            return None
+        if last:
+            lw = used + sp * (len(items) - 1)
+            return 3.0 if (len(items) == 1 or lw < colw * 0.22) else 0.0
+        if len(items) == 1:
+            return 50.0
+        gap = (colw - used) / (len(items) - 1)
+        c = max(0, gap / sp - 1) ** 2 + max(0, 0.9 - gap / sp) * 4 + (0.6 if hyph else 0)
+        if not hyph and len(re.sub(r"[^\wÀ-ÿ]", "", items[-1])) <= 2 and items[-1][-1] not in "-,.;:!?»…":
+            c += 1.5
+        return c
+
+    def solve(i, head):
+        key = (i, head)
+        if key in memo:
+            return memo[key]
+        res = (INF, None)
+        start = [head] if head is not None else []
+        j0 = i if head is None else i + 1
+        items = list(start)
+        j = j0
+        while True:
+            # fin de ligne après le mot j-1 complet
+            if items:
+                last = j >= n
+                c = line_cost(items, False, last)
+                if c is None:
+                    break
+                sub = (0.0, []) if last else solve(j, None)
+                if c + sub[0] < res[0]:
+                    res = (c + sub[0], [(list(items), last)] + sub[1])
+                if last:
+                    break
+            if j >= n:
+                break
+            # fin de ligne sur une césure du mot j
+            if items:
+                for a, b in splits[j]:
+                    c = line_cost(items + [a], True, False)
+                    if c is None:
+                        continue
+                    sub = solve(j, b)
+                    if c + sub[0] < res[0]:
+                        res = (c + sub[0], [(items + [a], False)] + sub[1])
+            items = items + [words[j]]
+            j += 1
+        memo[key] = res
+        return res
+
+    sc, lines = solve(0, None)
+    return lines, sc
+
+
 def best(d, text, f):
     """Essaie plusieurs largeurs de colonne, garde la plus belle composition."""
     opts = []
-    for dw in range(-30, 61, 10):
+    for dw in range(-110, 111, 10):
         colw = COLW - dw
-        lines, sc = compose(d, text, f, colw)
-        opts.append((sc + abs(dw) * 0.004, lines, colw))
+        for comp in (compose, compose_dp):
+            lines, sc = comp(d, text, f, colw)
+            if lines:
+                opts.append((sc + abs(dw) * 0.004, lines, colw))
     _, lines, colw = min(opts, key=lambda o: o[0])
     return lines, colw
 
@@ -194,7 +263,14 @@ def slide_cover(spec, count):
 def slide_quote(q, n):
     im = Image.new("RGB", (W, H), BG); d = ImageDraw.Draw(im)
     f, lh = font(48), 1.48
-    lines, colw = best(d, q["quote"], f)
+    if "\n" in q["quote"]:              # vers : un vers par ligne, au fer à gauche
+        lines = [([w for w in typo(v).split(" ") if w], True) for v in q["quote"].split("\n")]
+        sp = d.textlength(" ", font=f)
+        colw = max(sum(tl(d, w, f) for w in ws) + sp * (len(ws) - 1) for ws, _ in lines)
+        if colw > W - 2 * 120:          # vers trop long : retour à la prose justifiée
+            lines, colw = best(d, q["quote"].replace("\n", " / "), f)
+    else:
+        lines, colw = best(d, q["quote"], f)
     x0 = (W - colw) / 2
     block = len(lines) * f.size * lh + 60 + 44 + 46
     y = (H - block) / 2 - 50

@@ -1,0 +1,44 @@
+{
+  "id": "2026-10-08-l-automne",
+  "title": "L'automne",
+  "subtitle": "par ceux qui l'ont écrit",
+  "quotes": [
+    {
+      "quote": "La campagne, encore verte et riante, mais défeuillée en partie et déjà presque déserte, offrait partout l'image de la solitude et des approches de l'hiver.",
+      "author": "Jean-Jacques Rousseau",
+      "work": "Les Rêveries du promeneur solitaire",
+      "year": "1782"
+    },
+    {
+      "quote": "Levez-vous vite, orages désirés, qui devez emporter René dans les espaces d'une autre vie !",
+      "author": "Chateaubriand",
+      "work": "René",
+      "year": "1802"
+    },
+    {
+      "quote": "Je suis d'un pas rêveur le sentier solitaire ; / J'aime à revoir encor, pour la dernière fois, / Ce soleil pâlissant, dont la faible lumière / Perce à peine à mes pieds l'obscurité des bois.",
+      "author": "Lamartine",
+      "work": "Méditations poétiques, « L'Automne »",
+      "year": "1820"
+    },
+    {
+      "quote": "Bientôt nous plongerons dans les froides ténèbres ; / Adieu, vive clarté de nos étés trop courts !",
+      "author": "Baudelaire",
+      "work": "Les Fleurs du mal, « Chant d'automne »",
+      "year": "1857"
+    },
+    {
+      "quote": "Les sanglots longs\nDes violons\nDe l'automne\nBlessent mon cœur\nD'une langueur\nMonotone.",
+      "author": "Verlaine",
+      "work": "Poèmes saturniens, « Chanson d'automne »",
+      "year": "1866"
+    },
+    {
+      "quote": "Automne malade et adoré / Tu mourras quand l'ouragan soufflera dans les roseraies / Quand il aura neigé / Dans les vergers",
+      "author": "Apollinaire",
+      "work": "Alcools, « Automne malade »",
+      "year": "1913"
+    }
+  ],
+  "music": "Octobre (Chant d'automne), Tchaïkovski"
+}
