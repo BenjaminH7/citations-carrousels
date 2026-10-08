@@ -11,3 +11,9 @@ Moteur des carrousels de citations littéraires (domaine public), publiés chaqu
 pip install -r requirements.txt
 python3 generate.py spec.json posts/2026-10-09/
 ```
+
+## Paris Curls
+
+- `pariscurls/generate_tuto.py` : article du journal → carrousel « tuto » 1080×1350 (crème, serif + Inter, étapes chiffrées, produit associé).
+- `pariscurls/historique.json` : articles déjà transformés en carrousel.
+- `pariscurls/posts/AAAA-MM-JJ/` : visuels du jour.
