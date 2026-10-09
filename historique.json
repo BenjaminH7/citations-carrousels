@@ -113,5 +113,47 @@
         "quote": "À la fin tu es las de ce monde ancien / Bergère ô tour Eiffel le troupeau des ponts bêle ce matin"
       }
     ]
+  },
+  {
+    "date": "2026-10-09",
+    "theme": "la mélancolie",
+    "quotes": [
+      {
+        "auteur": "Joachim du Bellay",
+        "oeuvre": "Les Regrets",
+        "annee": "1558",
+        "quote": "Las, où est maintenant ce mépris de Fortune ? / Où est ce cœur vainqueur de toute adversité, / Cet honnête désir de l'immortalité, / Et cette honnête flamme au peuple non commune ?"
+      },
+      {
+        "auteur": "Chateaubriand",
+        "oeuvre": "René",
+        "annee": "1802",
+        "quote": "Levez-vous vite, orages désirés, qui devez emporter René dans les espaces d'une autre vie !"
+      },
+      {
+        "auteur": "Alfred de Musset",
+        "oeuvre": "Tristesse",
+        "annee": "1840",
+        "quote": "J'ai perdu ma force et ma vie, / Et mes amis et ma gaieté ; / J'ai perdu jusqu'à la fierté / Qui faisait croire à mon génie."
+      },
+      {
+        "auteur": "Gérard de Nerval",
+        "oeuvre": "El Desdichado, Les Chimères",
+        "annee": "1854",
+        "quote": "Je suis le Ténébreux, – le Veuf, – l'Inconsolé, / Le Prince d'Aquitaine à la Tour abolie : / Ma seule Étoile est morte, – et mon luth constellé / Porte le Soleil noir de la Mélancolie."
+      },
+      {
+        "auteur": "Paul Verlaine",
+        "oeuvre": "Romances sans paroles",
+        "annee": "1874",
+        "quote": "Il pleure dans mon cœur / Comme il pleut sur la ville ; / Quelle est cette langueur / Qui pénètre mon cœur ?"
+      },
+      {
+        "auteur": "Jules Laforgue",
+        "oeuvre": "Les Complaintes",
+        "annee": "1885",
+        "quote": "Ah ! que la Vie est quotidienne… / Et, du plus vrai qu'on se souvienne, / Comme on fut piètre et sans génie…"
+      }
+    ]
   }
 ]

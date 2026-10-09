@@ -1,37 +1,13 @@
 {
-  "id": "2026-10-08-paris",
-  "title": "Paris",
-  "subtitle": "par ceux qui l'ont aimée",
+  "id": "2026-10-09-la-melancolie",
+  "title": "La mélancolie",
+  "subtitle": "par ceux qui l'ont portée",
   "quotes": [
-    {
-      "quote": "Je l'aime tendrement, jusques à ses verrues et à ses taches. Je ne suis Français que par cette grande cité.",
-      "author": "Montaigne",
-      "work": "Essais, III, 9",
-      "year": "1588"
-    },
-    {
-      "quote": "Adieu donc, Paris, ville célèbre, ville de bruit, de fumée et de boue, où les femmes ne croient plus à l'honneur ni les hommes à la vertu.",
-      "author": "Jean-Jacques Rousseau",
-      "work": "Émile ou De l'éducation",
-      "year": "1762"
-    },
-    {
-      "quote": "Paris est un véritable océan. Jetez-y la sonde, vous n'en connaîtrez jamais la profondeur.",
-      "author": "Honoré de Balzac",
-      "work": "Le Père Goriot",
-      "year": "1835"
-    },
-    {
-      "quote": "Le vieux Paris n'est plus (la forme d'une ville / Change plus vite, hélas ! que le cœur d'un mortel)",
-      "author": "Charles Baudelaire",
-      "work": "Le Cygne, Les Fleurs du mal",
-      "year": "1861"
-    },
-    {
-      "quote": "À la fin tu es las de ce monde ancien / Bergère ô tour Eiffel le troupeau des ponts bêle ce matin",
-      "author": "Guillaume Apollinaire",
-      "work": "Zone, Alcools",
-      "year": "1913"
-    }
+    {"quote": "Las, où est maintenant ce mépris de Fortune ? / Où est ce cœur vainqueur de toute adversité, / Cet honnête désir de l'immortalité, / Et cette honnête flamme au peuple non commune ?", "author": "Joachim du Bellay", "work": "Les Regrets", "year": "1558"},
+    {"quote": "Levez-vous vite, orages désirés, qui devez emporter René dans les espaces d'une autre vie !", "author": "Chateaubriand", "work": "René", "year": "1802"},
+    {"quote": "J'ai perdu ma force et ma vie, / Et mes amis et ma gaieté ; / J'ai perdu jusqu'à la fierté / Qui faisait croire à mon génie.", "author": "Alfred de Musset", "work": "Tristesse", "year": "1840"},
+    {"quote": "Je suis le Ténébreux, – le Veuf, – l'Inconsolé, / Le Prince d'Aquitaine à la Tour abolie : / Ma seule Étoile est morte, – et mon luth constellé / Porte le Soleil noir de la Mélancolie.", "author": "Gérard de Nerval", "work": "El Desdichado, Les Chimères", "year": "1854"},
+    {"quote": "Il pleure dans mon cœur / Comme il pleut sur la ville ; / Quelle est cette langueur / Qui pénètre mon cœur ?", "author": "Paul Verlaine", "work": "Romances sans paroles", "year": "1874"},
+    {"quote": "Ah ! que la Vie est quotidienne… / Et, du plus vrai qu'on se souvienne, / Comme on fut piètre et sans génie…", "author": "Jules Laforgue", "work": "Les Complaintes", "year": "1885"}
   ]
 }
