@@ -155,5 +155,41 @@
         "quote": "Ah ! que la Vie est quotidienne… / Et, du plus vrai qu'on se souvienne, / Comme on fut piètre et sans génie…"
       }
     ]
+  },
+  {
+    "date": "2026-10-09",
+    "theme": "le voyage",
+    "quotes": [
+      {
+        "auteur": "Montaigne",
+        "oeuvre": "Essais, III, 9",
+        "annee": "1588",
+        "quote": "Je réponds ordinairement à ceux qui me demandent raison de mes voyages : que je sais bien ce que je fuis, mais non pas ce que je cherche."
+      },
+      {
+        "auteur": "Jean-Jacques Rousseau",
+        "oeuvre": "Les Confessions",
+        "annee": "1782",
+        "quote": "Je n'ai jamais tant pensé, tant existé, tant vécu, tant été moi, si j'ose ainsi dire, que dans les voyages que j'ai faits seul et à pied."
+      },
+      {
+        "auteur": "Madame de Staël",
+        "oeuvre": "Corinne ou l'Italie",
+        "annee": "1807",
+        "quote": "Voyager est, quoi qu'on en dise, un des plus tristes plaisirs de la vie."
+      },
+      {
+        "auteur": "Charles Baudelaire",
+        "oeuvre": "Le Voyage, Les Fleurs du mal",
+        "annee": "1861",
+        "quote": "Mais les vrais voyageurs sont ceux-là seuls qui partent / Pour partir ; cœurs légers, semblables aux ballons, / De leur fatalité jamais ils ne s'écartent, / Et, sans savoir pourquoi, disent toujours : Allons !"
+      },
+      {
+        "auteur": "Stéphane Mallarmé",
+        "oeuvre": "Brise marine",
+        "annee": "1866",
+        "quote": "La chair est triste, hélas ! et j'ai lu tous les livres. / Fuir ! là-bas fuir ! Je sens que des oiseaux sont ivres / D'être parmi l'écume inconnue et les cieux !"
+      }
+    ]
   }
 ]

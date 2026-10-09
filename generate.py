@@ -234,7 +234,7 @@ def slide_quote(q, n):
         verses = [typo(v.strip()) for v in re.split(VSEP, text) if v.strip()]
         maxw = W - 2 * 120
         size = 48
-        while size > 42:
+        while size > 40:
             f = font(size)
             if max(line_w(d, v.split(" "), f) for v in verses) <= maxw:
                 break

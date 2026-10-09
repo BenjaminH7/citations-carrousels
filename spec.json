@@ -1,13 +1,12 @@
 {
-  "id": "2026-10-09-la-melancolie",
-  "title": "La mélancolie",
-  "subtitle": "par ceux qui l'ont portée",
+  "id": "2026-10-09-le-voyage",
+  "title": "Le voyage",
+  "subtitle": "par ceux qui sont partis",
   "quotes": [
-    {"quote": "Las, où est maintenant ce mépris de Fortune ? / Où est ce cœur vainqueur de toute adversité, / Cet honnête désir de l'immortalité, / Et cette honnête flamme au peuple non commune ?", "author": "Joachim du Bellay", "work": "Les Regrets", "year": "1558"},
-    {"quote": "Levez-vous vite, orages désirés, qui devez emporter René dans les espaces d'une autre vie !", "author": "Chateaubriand", "work": "René", "year": "1802"},
-    {"quote": "J'ai perdu ma force et ma vie, / Et mes amis et ma gaieté ; / J'ai perdu jusqu'à la fierté / Qui faisait croire à mon génie.", "author": "Alfred de Musset", "work": "Tristesse", "year": "1840"},
-    {"quote": "Je suis le Ténébreux, – le Veuf, – l'Inconsolé, / Le Prince d'Aquitaine à la Tour abolie : / Ma seule Étoile est morte, – et mon luth constellé / Porte le Soleil noir de la Mélancolie.", "author": "Gérard de Nerval", "work": "El Desdichado, Les Chimères", "year": "1854"},
-    {"quote": "Il pleure dans mon cœur / Comme il pleut sur la ville ; / Quelle est cette langueur / Qui pénètre mon cœur ?", "author": "Paul Verlaine", "work": "Romances sans paroles", "year": "1874"},
-    {"quote": "Ah ! que la Vie est quotidienne… / Et, du plus vrai qu'on se souvienne, / Comme on fut piètre et sans génie…", "author": "Jules Laforgue", "work": "Les Complaintes", "year": "1885"}
+    {"quote": "Je réponds ordinairement à ceux qui me demandent raison de mes voyages : que je sais bien ce que je fuis, mais non pas ce que je cherche.", "author": "Montaigne", "work": "Essais, III, 9", "year": "1588"},
+    {"quote": "Je n'ai jamais tant pensé, tant existé, tant vécu, tant été moi, si j'ose ainsi dire, que dans les voyages que j'ai faits seul et à pied.", "author": "Jean-Jacques Rousseau", "work": "Les Confessions", "year": "1782"},
+    {"quote": "Voyager est, quoi qu'on en dise, un des plus tristes plaisirs de la vie.", "author": "Madame de Staël", "work": "Corinne ou l'Italie", "year": "1807"},
+    {"quote": "Mais les vrais voyageurs sont ceux-là seuls qui partent / Pour partir ; cœurs légers, semblables aux ballons, / De leur fatalité jamais ils ne s'écartent, / Et, sans savoir pourquoi, disent toujours : Allons !", "author": "Charles Baudelaire", "work": "Le Voyage, Les Fleurs du mal", "year": "1861"},
+    {"quote": "La chair est triste, hélas ! et j'ai lu tous les livres. / Fuir ! là-bas fuir ! Je sens que des oiseaux sont ivres / D'être parmi l'écume inconnue et les cieux !", "author": "Stéphane Mallarmé", "work": "Brise marine", "year": "1866"}
   ]
 }
