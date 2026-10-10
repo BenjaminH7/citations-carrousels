@@ -1,12 +1,18 @@
 {
-  "id": "2026-10-09-le-voyage",
-  "title": "Le voyage",
-  "subtitle": "par ceux qui sont partis",
-  "quotes": [
-    {"quote": "Je réponds ordinairement à ceux qui me demandent raison de mes voyages : que je sais bien ce que je fuis, mais non pas ce que je cherche.", "author": "Montaigne", "work": "Essais, III, 9", "year": "1588"},
-    {"quote": "Je n'ai jamais tant pensé, tant existé, tant vécu, tant été moi, si j'ose ainsi dire, que dans les voyages que j'ai faits seul et à pied.", "author": "Jean-Jacques Rousseau", "work": "Les Confessions", "year": "1782"},
-    {"quote": "Voyager est, quoi qu'on en dise, un des plus tristes plaisirs de la vie.", "author": "Madame de Staël", "work": "Corinne ou l'Italie", "year": "1807"},
-    {"quote": "Mais les vrais voyageurs sont ceux-là seuls qui partent / Pour partir ; cœurs légers, semblables aux ballons, / De leur fatalité jamais ils ne s'écartent, / Et, sans savoir pourquoi, disent toujours : Allons !", "author": "Charles Baudelaire", "work": "Le Voyage, Les Fleurs du mal", "year": "1861"},
-    {"quote": "La chair est triste, hélas ! et j'ai lu tous les livres. / Fuir ! là-bas fuir ! Je sens que des oiseaux sont ivres / D'être parmi l'écume inconnue et les cieux !", "author": "Stéphane Mallarmé", "work": "Brise marine", "year": "1866"}
-  ]
+  "id": "2026-10-10-wash-day",
+  "kicker": "Routine",
+  "title": "L'ordre de la wash day",
+  "hook": "Huit étapes, et l'ordre compte plus que les produits.",
+  "answer": "Huit étapes, toujours dans le même ordre : démêlage, shampoing du cuir chevelu, après-shampoing, soin profond 20 min, rinçage, leave-in, gel, séchage. Compte 50 à 90 minutes, tous les 3 à 7 jours.",
+  "steps": [
+    {"title": "Démêle avant l'eau", "detail": "4 sections maximum, des pointes vers les racines. Compte 5 à 10 minutes."},
+    {"title": "Shampouine le cuir chevelu seul", "detail": "Eau tiède, 35 à 38 °C. 3 à 5 ml de shampoing, massés 60 secondes."},
+    {"title": "Démêle dans l'après-shampoing", "detail": "10 à 30 ml sur les longueurs, puis 2 à 3 minutes de démêlage."},
+    {"title": "Leave-in sur cheveux ruisselants", "detail": "2 à 6 pressions selon la densité, sans essorer avant."},
+    {"title": "Gel tout de suite", "detail": "2 à 4 passages sans attendre, puis froisse 20 à 30 fois vers le crâne."},
+    {"title": "Sèche sans toucher", "detail": "15 à 30 min de plopping, puis diffuseur bas 10 à 20 min."}
+  ],
+  "mistake": "Démêler après avoir rincé l'après-shampoing. La fibre est alors nue et mouillée : c'est l'état où elle casse le plus facilement.",
+  "product": {"name": "La Routine Boucles", "line": "lavage & soin", "why": "Shampoing, soin démêlant et soin 3-en-1 réunis pour le lavage, le démêlage et le leave-in, dans cet ordre."},
+  "handle": "@pariscurls"
 }
