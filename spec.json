@@ -1,18 +1,13 @@
 {
-  "id": "2026-10-10-wash-day",
-  "kicker": "Routine",
-  "title": "L'ordre de la wash day",
-  "hook": "Huit étapes, et l'ordre compte plus que les produits.",
-  "answer": "Huit étapes, toujours dans le même ordre : démêlage, shampoing du cuir chevelu, après-shampoing, soin profond 20 min, rinçage, leave-in, gel, séchage. Compte 50 à 90 minutes, tous les 3 à 7 jours.",
-  "steps": [
-    {"title": "Démêle avant l'eau", "detail": "4 sections maximum, des pointes vers les racines. Compte 5 à 10 minutes."},
-    {"title": "Shampouine le cuir chevelu seul", "detail": "Eau tiède, 35 à 38 °C. 3 à 5 ml de shampoing, massés 60 secondes."},
-    {"title": "Démêle dans l'après-shampoing", "detail": "10 à 30 ml sur les longueurs, puis 2 à 3 minutes de démêlage."},
-    {"title": "Leave-in sur cheveux ruisselants", "detail": "2 à 6 pressions selon la densité, sans essorer avant."},
-    {"title": "Gel tout de suite", "detail": "2 à 4 passages sans attendre, puis froisse 20 à 30 fois vers le crâne."},
-    {"title": "Sèche sans toucher", "detail": "15 à 30 min de plopping, puis diffuseur bas 10 à 20 min."}
-  ],
-  "mistake": "Démêler après avoir rincé l'après-shampoing. La fibre est alors nue et mouillée : c'est l'état où elle casse le plus facilement.",
-  "product": {"name": "La Routine Boucles", "line": "lavage & soin", "why": "Shampoing, soin démêlant et soin 3-en-1 réunis pour le lavage, le démêlage et le leave-in, dans cet ordre."},
-  "handle": "@pariscurls"
+  "id": "2026-10-13-bonheur",
+  "title": "Le bonheur",
+  "subtitle": "par ceux qui l'ont cherché",
+  "quotes": [
+    {"quote": "On n'est jamais si heureux ni si malheureux qu'on s'imagine.", "author": "La Rochefoucauld", "work": "Maximes", "year": "1665"},
+    {"quote": "Nous ne vivons jamais, mais nous espérons de vivre ; et, nous disposant toujours à être heureux, il est inévitable que nous ne le soyons jamais.", "author": "Blaise Pascal", "work": "Pensées", "year": "1670"},
+    {"quote": "On jouit moins de ce qu'on obtient que de ce qu'on espère, et l'on n'est heureux qu'avant d'être heureux.", "author": "Jean-Jacques Rousseau", "work": "Julie ou la Nouvelle Héloïse", "year": "1761"},
+    {"quote": "Il faut commencer par se bien dire à soi-même et par se bien convaincre que nous n'avons rien à faire dans ce monde qu'à nous y procurer des sensations et des sentiments agréables.", "author": "Émilie du Châtelet", "work": "Discours sur le bonheur", "year": "1779"},
+    {"quote": "Le bonheur n'est pas chose aisée : il est très difficile de le trouver en nous, et impossible de le trouver ailleurs.", "author": "Chamfort", "work": "Maximes et pensées", "year": "1795"},
+    {"quote": "Il est impossible que l'on soit heureux si l'on ne veut pas l'être ; il faut donc vouloir son bonheur et le faire.", "author": "Alain", "work": "Propos sur le bonheur", "year": "1925"}
+  ]
 }

@@ -191,5 +191,89 @@
         "quote": "La chair est triste, hélas ! et j'ai lu tous les livres. / Fuir ! là-bas fuir ! Je sens que des oiseaux sont ivres / D'être parmi l'écume inconnue et les cieux !"
       }
     ]
+  },
+  {
+    "date": "2026-10-10",
+    "theme": "la solitude",
+    "quotes": [
+      {
+        "auteur": "Montaigne",
+        "oeuvre": "Essais, I, 39, « De la solitude »",
+        "annee": "1580",
+        "quote": "Il se faut réserver une arrière-boutique toute nôtre, toute franche, en laquelle nous établissons notre vraie liberté et principale retraite et solitude."
+      },
+      {
+        "auteur": "Blaise Pascal",
+        "oeuvre": "Pensées",
+        "annee": "1670",
+        "quote": "Tout le malheur des hommes vient d'une seule chose, qui est de ne savoir pas demeurer en repos dans une chambre."
+      },
+      {
+        "auteur": "Jean de La Bruyère",
+        "oeuvre": "Les Caractères, « De l'homme »",
+        "annee": "1688",
+        "quote": "Tout notre mal vient de ne pouvoir être seuls : de là le jeu, le luxe, la dissipation, le vin, les femmes, l'ignorance, la médisance, l'envie, l'oubli de soi-même et de Dieu."
+      },
+      {
+        "auteur": "Vauvenargues",
+        "oeuvre": "Réflexions et maximes",
+        "annee": "1746",
+        "quote": "La solitude est à l'esprit ce que la diète est au corps, mortelle lorsqu'elle est trop longue, quoique nécessaire."
+      },
+      {
+        "auteur": "Alphonse de Lamartine",
+        "oeuvre": "L'Isolement, Méditations poétiques",
+        "annee": "1820",
+        "quote": "Que me font ces vallons, ces palais, ces chaumières, / Vains objets dont pour moi le charme est envolé ? / Fleuves, rochers, forêts, solitudes si chères, / Un seul être vous manque, et tout est dépeuplé !"
+      },
+      {
+        "auteur": "Charles Baudelaire",
+        "oeuvre": "Les Foules, Petits Poèmes en prose",
+        "annee": "1869",
+        "quote": "Multitude, solitude : termes égaux et convertibles pour le poète actif et fécond. Qui ne sait pas peupler sa solitude, ne sait pas non plus être seul dans une foule affairée."
+      }
+    ]
+  },
+  {
+    "date": "2026-10-13",
+    "theme": "le bonheur",
+    "quotes": [
+      {
+        "auteur": "La Rochefoucauld",
+        "oeuvre": "Maximes",
+        "annee": "1665",
+        "quote": "On n'est jamais si heureux ni si malheureux qu'on s'imagine."
+      },
+      {
+        "auteur": "Blaise Pascal",
+        "oeuvre": "Pensées",
+        "annee": "1670",
+        "quote": "Nous ne vivons jamais, mais nous espérons de vivre ; et, nous disposant toujours à être heureux, il est inévitable que nous ne le soyons jamais."
+      },
+      {
+        "auteur": "Jean-Jacques Rousseau",
+        "oeuvre": "Julie ou la Nouvelle Héloïse",
+        "annee": "1761",
+        "quote": "On jouit moins de ce qu'on obtient que de ce qu'on espère, et l'on n'est heureux qu'avant d'être heureux."
+      },
+      {
+        "auteur": "Émilie du Châtelet",
+        "oeuvre": "Discours sur le bonheur",
+        "annee": "1779",
+        "quote": "Il faut commencer par se bien dire à soi-même et par se bien convaincre que nous n'avons rien à faire dans ce monde qu'à nous y procurer des sensations et des sentiments agréables."
+      },
+      {
+        "auteur": "Chamfort",
+        "oeuvre": "Maximes et pensées",
+        "annee": "1795",
+        "quote": "Le bonheur n'est pas chose aisée : il est très difficile de le trouver en nous, et impossible de le trouver ailleurs."
+      },
+      {
+        "auteur": "Alain",
+        "oeuvre": "Propos sur le bonheur",
+        "annee": "1925",
+        "quote": "Il est impossible que l'on soit heureux si l'on ne veut pas l'être ; il faut donc vouloir son bonheur et le faire."
+      }
+    ]
   }
 ]
