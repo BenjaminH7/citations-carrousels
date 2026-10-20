@@ -1,13 +1,13 @@
 {
-  "id": "2026-10-13-bonheur",
-  "title": "Le bonheur",
-  "subtitle": "par ceux qui l'ont cherché",
+  "id": "2026-10-20-la-nuit",
+  "title": "La nuit",
+  "subtitle": "par ceux qui l'ont veillée",
   "quotes": [
-    {"quote": "On n'est jamais si heureux ni si malheureux qu'on s'imagine.", "author": "La Rochefoucauld", "work": "Maximes", "year": "1665"},
-    {"quote": "Nous ne vivons jamais, mais nous espérons de vivre ; et, nous disposant toujours à être heureux, il est inévitable que nous ne le soyons jamais.", "author": "Blaise Pascal", "work": "Pensées", "year": "1670"},
-    {"quote": "On jouit moins de ce qu'on obtient que de ce qu'on espère, et l'on n'est heureux qu'avant d'être heureux.", "author": "Jean-Jacques Rousseau", "work": "Julie ou la Nouvelle Héloïse", "year": "1761"},
-    {"quote": "Il faut commencer par se bien dire à soi-même et par se bien convaincre que nous n'avons rien à faire dans ce monde qu'à nous y procurer des sensations et des sentiments agréables.", "author": "Émilie du Châtelet", "work": "Discours sur le bonheur", "year": "1779"},
-    {"quote": "Le bonheur n'est pas chose aisée : il est très difficile de le trouver en nous, et impossible de le trouver ailleurs.", "author": "Chamfort", "work": "Maximes et pensées", "year": "1795"},
-    {"quote": "Il est impossible que l'on soit heureux si l'on ne veut pas l'être ; il faut donc vouloir son bonheur et le faire.", "author": "Alain", "work": "Propos sur le bonheur", "year": "1925"}
+    {"quote": "Le silence éternel de ces espaces infinis m'effraie.", "author": "Blaise Pascal", "work": "Pensées", "year": "1670"},
+    {"quote": "Le Rêve est une seconde vie. Je n'ai pu percer sans frémir ces portes d'ivoire ou de corne qui nous séparent du monde invisible.", "author": "Gérard de Nerval", "work": "Aurélia", "year": "1855"},
+    {"quote": "Quel dieu, quel moissonneur de l'éternel été / Avait, en s'en allant, négligemment jeté / Cette faucille d'or dans le champ des étoiles.", "author": "Victor Hugo", "work": "La Légende des siècles", "year": "1859"},
+    {"quote": "Rien, ni les vieux jardins reflétés par les yeux / Ne retiendra ce cœur qui dans la mer se trempe / Ô nuits ! ni la clarté déserte de ma lampe / Sur le vide papier que la blancheur défend", "author": "Stéphane Mallarmé", "work": "Brise marine", "year": "1866"},
+    {"quote": "Et, comme un long linceul traînant à l'Orient, / Entends, ma chère, entends la douce Nuit qui marche.", "author": "Charles Baudelaire", "work": "Les Fleurs du mal", "year": "1868"},
+    {"quote": "Un vaste et tendre / Apaisement / Semble descendre / Du firmament / Que l'astre irise… / C'est l'heure exquise.", "author": "Paul Verlaine", "work": "La Bonne Chanson", "year": "1870"}
   ]
 }

@@ -275,5 +275,47 @@
         "quote": "Il est impossible que l'on soit heureux si l'on ne veut pas l'être ; il faut donc vouloir son bonheur et le faire."
       }
     ]
+  },
+  {
+    "date": "2026-10-20",
+    "theme": "la nuit",
+    "quotes": [
+      {
+        "auteur": "Blaise Pascal",
+        "oeuvre": "Pensées",
+        "annee": "1670",
+        "quote": "Le silence éternel de ces espaces infinis m'effraie."
+      },
+      {
+        "auteur": "Gérard de Nerval",
+        "oeuvre": "Aurélia",
+        "annee": "1855",
+        "quote": "Le Rêve est une seconde vie. Je n'ai pu percer sans frémir ces portes d'ivoire ou de corne qui nous séparent du monde invisible."
+      },
+      {
+        "auteur": "Victor Hugo",
+        "oeuvre": "La Légende des siècles",
+        "annee": "1859",
+        "quote": "Quel dieu, quel moissonneur de l'éternel été / Avait, en s'en allant, négligemment jeté / Cette faucille d'or dans le champ des étoiles."
+      },
+      {
+        "auteur": "Stéphane Mallarmé",
+        "oeuvre": "Brise marine",
+        "annee": "1866",
+        "quote": "Rien, ni les vieux jardins reflétés par les yeux / Ne retiendra ce cœur qui dans la mer se trempe / Ô nuits ! ni la clarté déserte de ma lampe / Sur le vide papier que la blancheur défend"
+      },
+      {
+        "auteur": "Charles Baudelaire",
+        "oeuvre": "Les Fleurs du mal",
+        "annee": "1868",
+        "quote": "Et, comme un long linceul traînant à l'Orient, / Entends, ma chère, entends la douce Nuit qui marche."
+      },
+      {
+        "auteur": "Paul Verlaine",
+        "oeuvre": "La Bonne Chanson",
+        "annee": "1870",
+        "quote": "Un vaste et tendre / Apaisement / Semble descendre / Du firmament / Que l'astre irise… / C'est l'heure exquise."
+      }
+    ]
   }
 ]
