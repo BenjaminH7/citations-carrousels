@@ -317,5 +317,41 @@
         "quote": "Un vaste et tendre / Apaisement / Semble descendre / Du firmament / Que l'astre irise… / C'est l'heure exquise."
       }
     ]
+  },
+  {
+    "date": "2026-10-21",
+    "theme": "l'amitié",
+    "quotes": [
+      {
+        "auteur": "Montaigne",
+        "oeuvre": "Essais, « De l'amitié »",
+        "annee": "1595",
+        "quote": "Si on me presse de dire pourquoi je l'aimais, je sens que cela ne se peut exprimer qu'en répondant : parce que c'était lui, parce que c'était moi."
+      },
+      {
+        "auteur": "La Rochefoucauld",
+        "oeuvre": "Maximes",
+        "annee": "1678",
+        "quote": "Quelque rare que soit le véritable amour, il l'est encore moins que la véritable amitié."
+      },
+      {
+        "auteur": "Jean de La Fontaine",
+        "oeuvre": "Les Deux Amis, Fables",
+        "annee": "1678",
+        "quote": "Qu'un ami véritable est une douce chose ! / Il cherche vos besoins au fond de votre cœur ; / Il vous épargne la pudeur / De les lui découvrir vous-même."
+      },
+      {
+        "auteur": "Jean de La Bruyère",
+        "oeuvre": "Les Caractères, « Du cœur »",
+        "annee": "1688",
+        "quote": "Il y a un goût dans la pure amitié où ne peuvent atteindre ceux qui sont nés médiocres."
+      },
+      {
+        "auteur": "Joseph Joubert",
+        "oeuvre": "Pensées",
+        "annee": "1838",
+        "quote": "Quand mes amis sont borgnes, je les regarde de profil."
+      }
+    ]
   }
 ]
